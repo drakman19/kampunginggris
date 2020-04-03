@@ -80,7 +80,7 @@ var {
     display: flex;
     left: 0;
     position: fixed !important;
-    background: url(wp-content/uploads/2020/03/WhatsApp-Image-2020-03-06-at-01.39.51.jpg) no-repeat;
+    background: url(https://jagobahasa.com/wp-content/uploads/2020/03/WhatsApp-Image-2020-03-06-at-01.39.51.jpeg) no-repeat;
     background-size: cover;
     min-height: 450px;
     clip-path: polygon(50% 0%, 100% 0, 100% 88%, 49% 100%, 0 88%, 0 0);
