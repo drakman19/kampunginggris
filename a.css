@@ -1,0 +1,386 @@
+body {
+    color: #3a3a3a;
+    font-family: 'Lato ', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+big,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+iframe,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+ul,
+var {
+    border: 0;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.splash-container {
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    left: 0;
+    position: fixed !important;
+    background: url(wp-content/uploads/2020/03/WhatsApp-Image-2020-03-06-at-01.39.51.jpg) no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    clip-path: polygon(50% 0%, 100% 0, 100% 88%, 49% 100%, 0 88%, 0 0);
+}
+
+.splash {
+    background-color: #000000;
+    opacity: 0.75;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.splash-head {
+    color: #FFFFFF;
+    font-family: "Tahoma", Sans-serif;
+    font-size: 30px;
+    line-height: 1.2em;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.shapes {
+    bottom: -1px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+}
+
+.gap {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 12px;
+    max-width: 720px;
+}
+
+.row {
+    padding: 10px;
+    display: table;
+    width: 100%;
+    position: relative;
+    align-content: flex-start;
+    text-align: center;
+}
+
+.splash-subhead {
+    color: #FFFFFF;
+    font-family: "PT Sans", Sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2em;
+    text-shadow: 0px 0px 10px #000000;
+    margin-bottom: 20px;
+}
+
+.button-warning {
+    font-family: "Tahoma", Sans-serif;
+    font-weight: bold;
+    background-color: #FFA900;
+    border-style: solid;
+    border-width: 0px 05px 05px 0px;
+    border-color: #DE980E;
+    border-radius: 8px 8px 8px 8px;
+    padding: 20px 40px;
+    color: #fff;
+}
+
+.button-warning:active,
+.button-warning:hover {
+    transform: scale(1.2);
+    transition-timing-function: cubic-bezier(0.47, 2.02, .31, -.36);
+}
+
+.button-info {
+    font-family: "Tahoma", Sans-serif;
+    font-weight: bold;
+    background-color: #DA336B;
+    border-style: solid;
+    border-width: 0px 05px 05px 0px;
+    border-color: #7A011F;
+    border-radius: 8px 8px 8px 8px;
+    padding: 20px 40px;
+    color: #fff;
+}
+
+.button-info:active,
+.button-info:hover {
+    transform: scale(1.2);
+    transition-timing-function: cubic-bezier(0.47, 2.02, .31, -.36);
+}
+
+.button-test {
+    font-family: "Tahoma", Sans-serif;
+    font-weight: bold;
+    background-color: #3AC1BF;
+    border-style: solid;
+    border-width: 0px 05px 05px 0px;
+    border-color: #008C8A;
+    border-radius: 8px 8px 8px 8px;
+    padding: 20px 40px;
+    color: #fff;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.button-test:active,
+.button-test:hover {
+    transform: scale(1.2);
+    transition-timing-function: cubic-bezier(0.47, 2.02, .31, -.36);
+}
+
+. * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*
+ * -- CONTENT STYLES --
+ * This represents the content area (everything below the blue section)
+ */
+
+.content-wrapper {
+    /* These styles are required for the "scroll-over" effect */
+    position: absolute;
+    top: 87%;
+    width: 100%;
+    min-height: 12%;
+    z-index: 2;
+    background: white;
+}
+
+
+/* We want to give the content area some more padding */
+
+.content {
+    padding: 40px 30px 20px 30px;
+    text-align: center;
+    margin: 10px 10px 13px;
+}
+
+.child {
+    min-height: 450px;
+    margin-top: 25px;
+}
+
+
+}
+
+/* This is the class used for the main content headers (<h2>) */
+.content-head {
+    color: #000000;
+    font-family: "Tahoma", Sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* This is a modifier class used when the content-head is inside a ribbon */
+.content-head-ribbon {
+    color: white;
+}
+
+/* This is the class used for the content sub-headers (<h3>) */
+.content-subhead {
+    color: #030303;
+    font-weight: 600;
+}
+.content-subhead i {
+    margin-right: 7px;
+}
+
+/* This is the class used for the dark-background areas. */
+.ribbon {
+    background: #2d3e50;
+    color: #aaa;
+}
+
+/* This is the class used for the footer */
+.footer {
+    background: #111;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.content-heading-title {
+    color: #000000;
+    font-family: "PT Sans", Sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+@media (min-width: 48em) {
+    /* We increase the body font size */
+    
+    body {
+        font-size: 16px;
+    }
+    /* We can align the menu header to the left, but float the
+        menu items to the right. */
+    
+    .home-menu {
+        text-align: left;
+    }
+    
+    .home-menu ul {
+        float: right;
+    }
+    /* We increase the height of the splash-container */
+    /*    .splash-container {
+            height: 500px;
+        }*/
+    /* We decrease the width of the .splash, since we have more width
+        to work with */
+    
+    .elementor-3443 .elementor-element.elementor-element-23938bf6 .elementor-image img {
+        width: 70%;
+    }
+}
+
+/*
+     * -- DESKTOP (AND UP) MEDIA QUERIES --
+     * On desktops and other large devices, we want to over-ride some
+     * of the mobile and tablet styles.
+     */
+@media (min-width: 78em) {
+    /* We increase the header font size even more */
+}
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+.content-head {
+    color: #000000;
+    font-family: "Tahoma", Sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+.order {
+    text-align: center;
+    align-items: center;
+    padding: 121px 10px 0 0;
+}
+.box {
+    border-style: solid;
+    border-width: 2.5px 2.5px 2.5px 2.5px;
+    border-color: #FCAC0F;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin: 10px 10px 10px 10px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 20px;
+    height: 350px;
+    justify-items: center;
+    display: grid;
+}
+.lightbox {
+    /** Default lightbox to hidden */
+    
+    display: none;
+    /** Position and style */
+    
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+.lightbox img {
+    /** Pad the lightbox image */
+    
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 2%;
+}
+.lightbox:target {
+    /** Remove default browser outline */
+    
+    outline: none;
+    /** Unhide lightbox **/
+    
+    display: block;
+}
