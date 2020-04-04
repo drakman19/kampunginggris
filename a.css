@@ -270,10 +270,6 @@ var {
 }
 
 /* This is the class used for the dark-background areas. */
-.ribbon {
-    background: #2d3e50;
-    color: #aaa;
-}
 
 /* This is the class used for the footer */
 .footer {
@@ -383,4 +379,471 @@ var {
     /** Unhide lightbox **/
     
     display: block;
+}
+.carrousel {
+    background: #ffffff;
+    text-align: center;
+    padding: 4em 0;
+    max-width: 750px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.carrousel h2 {
+    margin: 0;
+    margin-top: -1.7em;
+    padding: 0;
+    font-size: 1em;
+    text-align: center;
+    color: #bbbbbb;
+}
+.carrousel .slides {
+    width: 600%;
+    left: 0;
+    padding-left: 0;
+    padding-top: 1em;
+    overflow: hidden;
+    list-style: none;
+    position: relative;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -o-transition: transform .5s;
+    transition: transform .5s;
+}
+.carrousel .slides li {
+    width: 15%;
+    position: relative;
+    float: left;
+    -webkit-animation-name: autoplay;
+    animation-name: autoplay;
+    /* This will change the time it takes to move to next slide */
+    
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.carrousel li p {
+    margin-top: 0;
+}
+.carrousel li q {
+    max-width: 90%;
+    margin: auto;
+    color: #666666;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.carrousel li img {
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+.carrousel li span.author {
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: #777777;
+    display: block;
+}
+.carrousel .slidesNavigation {
+    display: hidden;
+    list-style: none;
+    text-align: center;
+    bottom: 1em;
+    /*--- Centering trick---*/
+    /* Absolute positioning*/
+    
+    position: absolute;
+    /* Abosulte positioning*/
+    /*This width  is the addition of the width of all the navigations dots - So in this case is   104 because the navigation dots are 26px (width:10px and 6px marginleft + 6 px marginright) and there are 4 dots so 4x26=104 */
+    
+    left: 50%;
+    /*Centering de element*/
+    
+    margin-left: -52px;
+    /*adjusting the centering by applying a negative margin of half of the width*/
+}
+.carrousel input {
+    display: none;
+}
+.carrousel .slidesNavigation label {
+    float: left;
+    margin: 6px;
+    display: block;
+    height: 10px;
+    width: 10px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: solid 2px #2980b9;
+    font-size: 0;
+}
+
+/* You have to repeat this with each slide
+TODO: make it easier with SCSS
+25% movement 100/slides-num
+*/
+#radio-1:checked~.slides {
+    transform: translateX(0%);
+}
+#radio-2:checked~.slides {
+    transform: translateX(-15%);
+}
+#radio-3:checked~.slides {
+    transform: translateX(-30%);
+}
+#radio-4:checked~.slides {
+    transform: translateX(-45%);
+}
+#radio-5:checked~.slides {
+    transform: translateX(-60%);
+}
+#radio-6:checked~.slides {
+    transform: translateX(-75%);
+}
+.carrousel .slidesNavigation label:hover {
+    cursor: pointer;
+}
+
+/* You have to repeat this with each slide/dot */
+.carrousel #radio-1:checked~.slidesNavigation label#dotForRadio-1,
+.carrousel #radio-2:checked~.slidesNavigation label#dotForRadio-2,
+.carrousel #radio-3:checked~.slidesNavigation label#dotForRadio-3,
+.carrousel #radio-4:checked~.slidesNavigation label#dotForRadio-4,
+.carrousel #radio-5:checked~.slidesNavigation label#dotForRadio-5,
+.carrousel #radio-6:checked~.slidesNavigation label#dotForRadio-6 {
+    background: #2980b9;
+}
+@media (max-width: 796px) {
+    .carrousel {
+        height: 8.5em;
+    }
+}
+@media (max-width: 480px) {
+    .carrousel li p {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    
+    .carrousel li q {
+        font-size: 1em;
+    }
+    
+    .carrousel li img {
+        width: 2em;
+        margin-left: -1em;
+        margin-right: 0.25em;
+    }
+}
+@-webkit-keyframes autoplay {
+    /* position of the first slide */
+    
+    0% {
+        left: 0;
+    }
+    /* position of the second slide */
+    
+    25% {
+        left: -20.625rem;
+    }
+    /* position of the third slide */
+    
+    50% {
+        left: -81.25rem;
+    }
+    /* position of the fourth slide */
+    
+    100% {
+        left: -121.875rem;
+    }
+}
+@keyframes autoplay {
+    /* position of the first slide */
+    
+    0% {
+        left: 0;
+    }
+    /* position of the second slide */
+    
+    25% {
+        left: -40.625rem;
+    }
+    /* position of the third slide */
+    
+    50% {
+        left: -81.25rem;
+    }
+    /* position of the fourth slide */
+    
+    100% {
+        left: -121.875rem;
+    }
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /*16:9*/
+    
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.center {
+    justify-content: center;
+}
+.diskon {
+    color: #FF0000;
+    font-family: "Cabin Sketch", Sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+.pricing-header {
+    padding: 20px 0;
+}
+.heading {
+    color: #000000;
+    font-family: "Tahoma", Sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-size: 24px;
+    font-weight: 600;
+}
+.subheading {
+    color: #000000;
+    font-family: "PT Sans", Sans-serif;
+    font-size: 18px;
+}
+.table-price {
+    background-color: #DEFFDA;
+    padding: 55px 55px 55px 55px;
+    font-family: "Tahoma", Sans-serif;
+    font-size: 35px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+}
+.original-price {
+    color: #000000;
+    font-family: "Tahoma", Sans-serif;
+    align-self: center;
+    line-height: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    font-weight: 400;
+    font-size: medium;
+    font-style: normal;
+    text-decoration: line-through;
+}
+.currency {
+    align-self: flex-start;
+}
+.integer-part {
+    line-height: .8;
+    font-weight: 600;
+}
+.box-price {
+    border-style: solid;
+    border-width: 2.5px 2.5px 2.5px 2.5px;
+    border-color: #FCAC0F;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin: 10px 10px 10px 10px;
+    border-radius: 20px;
+    justify-items: center;
+    display: grid;
+    background: #fff;
+}
+.table-period {
+    color: #000000;
+    font-family: "PT Sans", Sans-serif;
+    line-height: 2.5em;
+    letter-spacing: 1px;
+    font-size: medium;
+}
+.features-list {
+    background-color: #ffffff;
+    padding: 30px 0px 0px 0px;
+    text-align: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #50656E;
+}
+.features-list li {
+    background-color: #ffffff;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #50656E;
+    padding: 10px;
+    text-align: left;
+}
+.features-list li:before {
+    content: "\f058";
+    /* FontAwesome Unicode */
+    
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.3em;
+    color: #00B000;
+}
+.table-footer {
+    padding: 30px 0;
+}
+sup {
+    font-weight: 600;
+    vertical-align: super;
+    font-size: small;
+}
+.ribbon {
+    position: relative;
+    right: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 75px;
+    text-align: right;
+}
+.ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#DC5049 0%, #DC5049 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px;
+    right: -21px;
+}
+.ribbon span::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #DC5049;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #DC5049;
+}
+.ribbon span::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #DC5049;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #DC5049;
+}
+
+/*--------Accordion-------*/
+.acc-kontainer {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+}
+.acc-kontainer .acc-body {
+    width: 98%;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    height: 0;
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.2);
+    line-height: 28px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.acc-kontainer label {
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    padding: 15px;
+    width: 100%;
+    font-weight: 400;
+    box-sizing: border-box;
+    z-index: 100;
+    background-color: #f1f1f1;
+    color: #000000;
+    font-family: "PT Sans", Sans-serif;
+    line-height: 1.2em;
+}
+.acc-kontainer input {
+    display: none;
+}
+.acc-kontainer label:before {
+    font-family: 'FontAwesome';
+    content: '\f067';
+    font-weight: bolder;
+    float: right;
+}
+.acc-kontainer input:checked+label {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.acc-kontainer input:checked+label:before {
+    font-family: 'FontAwesome';
+    content: '\f00d';
+    transition: 0.5s;
+}
+.acc-kontainer input:checked~.acc-body {
+    height: auto;
+    color: #fff;
+    font-size: 16px;
+    padding: 20px;
+    transition: 0.5s;
+}
+@media (max-width: 767px) {
+    .splash-head {
+        font-size: 25px;
+    }
+    
+    .splash-subhead {
+        font-size: 18px;
+        line-height: 1.2em;
+    }
+    
+    .button-warning {
+        font-family: "Tahoma", Sans-serif;
+        font-weight: bold;
+        background-color: #FFA900;
+        border-style: solid;
+        border-width: 0px 05px 05px 0px;
+        border-color: #DE980E;
+        border-radius: 8px 8px 8px 8px;
+        padding: 11px 11px;
+        color: #fff;
+    }
+    
+    .content-wrapper {
+        top: 65%;
+    }
 }
